@@ -1,5 +1,7 @@
 package stringKullanimi;
 
+import java.util.ArrayList;
+
 /**
  * Created by Nesrin ÜLGAY on 8/13/2018.
  */
@@ -55,7 +57,25 @@ public class atamaOperatoru {
          * + operatorü sayı olarak ekler.
          * Ancak karşısına Stirng bir dğeer çıktığı andan sonraki sayısal verileri string olarak birbirine bağlar
          */
-        System.out.println (25+2+"Sun" + 4+5);
+        System.out.println (25 + 2 + "Sun" + 4 + 5);
+
+        /**
+         Atama	=	x = y	y’nin değerini x’e ata
+         Topla-ata	+ =	x + = y	x + y’nin değerini x’e ata
+         Çıkar-ata	– =	x – = y	x – y’nin değerini x’e ata
+         Çarp-ata	* =	x * = y	x * y’nin değerini x’e ata
+         Böl-ata	/ =	x / = y	x / y’nin değerini x’e ata
+         Kalanını ata 	% =	x % = y	x % y’nin değerini x’e ata
+         */
+
+
+        // string tanımlanması
+       // Bir metin değerini İnternet bağlantısı ya da başka bir akış (Stream) üzerinden yollamak istersek
+        // byte değerine çevirmemiz gerekebilir. Bir String içerisindeki her harfin byte değerini hesaplayıp
+        // String'i byte dizisine çeviren metod getBytes metodudur
+        String myString = "Merhaba dünya";
+        byte[] strByte = myString.getBytes ();
+        System.out.println (new String (strByte));
 
 
     }
