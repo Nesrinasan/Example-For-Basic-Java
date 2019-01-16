@@ -1,9 +1,9 @@
 package OCPPrensible;
 
-import OCPPrensible.OCPKullanılan.IIslem;
-import OCPPrensible.OCPKullanılan.IlkIslem;
-import OCPPrensible.OCPKullanılan.IslemYapici2;
-import OCPPrensible.OCPKullanılmayan.IslemYapici;
+import OCPPrensible.OCPKullanilan.IIslem;
+import OCPPrensible.OCPKullanilan.IlkIslem;
+import OCPPrensible.OCPKullanilan.IslemYapici2;
+import OCPPrensible.OCPKullanilmayan.IslemYapici;
 
 /**
  * Created by Nesrin ÜLGAY on 1/16/2019.
