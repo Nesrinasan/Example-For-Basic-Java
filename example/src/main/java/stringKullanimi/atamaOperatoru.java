@@ -61,16 +61,16 @@ public class atamaOperatoru {
 
         /**
          Atama	=	x = y	y’nin değerini x’e ata
-         Topla-ata	+ =	x + = y	x + y’nin değerini x’e ata
-         Çıkar-ata	– =	x – = y	x – y’nin değerini x’e ata
-         Çarp-ata	* =	x * = y	x * y’nin değerini x’e ata
-         Böl-ata	/ =	x / = y	x / y’nin değerini x’e ata
-         Kalanını ata 	% =	x % = y	x % y’nin değerini x’e ata
+         Topla-ata	+ =	x + = y     	x + y’nin değerini x’e ata
+         Çıkar-ata	– =	x – = y	        x – y’nin değerini x’e ata
+         Çarp-ata	* =	x * = y	        x * y’nin değerini x’e ata
+         Böl-ata	/ =	x / = y	        x / y’nin değerini x’e ata
+         Kalanını ata 	% =	x % = y	    x % y’nin değerini x’e ata
          */
 
 
         // string tanımlanması
-       // Bir metin değerini İnternet bağlantısı ya da başka bir akış (Stream) üzerinden yollamak istersek
+        // Bir metin değerini İnternet bağlantısı ya da başka bir akış (Stream) üzerinden yollamak istersek
         // byte değerine çevirmemiz gerekebilir. Bir String içerisindeki her harfin byte değerini hesaplayıp
         // String'i byte dizisine çeviren metod getBytes metodudur
         String myString = "Merhaba dünya";
