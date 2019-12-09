@@ -7,6 +7,10 @@ public class myException extends Exception{
 
     String mesaj;
     public myException(String mesaj){
+        /**
+         *ya da
+         */
+//        super(mesaj);
         this.mesaj = mesaj;
     }
 
@@ -17,4 +21,6 @@ public class myException extends Exception{
     public String getMessage() {
         return mesaj;
     }
+
+
 }
