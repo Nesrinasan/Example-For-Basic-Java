@@ -19,6 +19,9 @@ public class StringBuilderVaBufferKullanimi {
         stringBuilder.append (karakter, 1, 3);
         System.out.println (stringBuilder);
 
+        String s = new String("nesrin");
+        s = s + "burak";
+
         /**
          * StringBuilder içerisinde appende ve insert komutları vardır. Bunlardan append komutu
          * veriyi birbirinin üzerine olduğu gibi ekler ancak insert komutu ile istediğimiz noktaya veri ekleyebiliriz.

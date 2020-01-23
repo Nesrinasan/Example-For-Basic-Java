@@ -1,11 +1,11 @@
-package exceptionhandling;
+package model;
 
 /**
  * Created by Universal on 12/7/2019.
  */
 public class Sinif {
 
-    String adi;
+    public String adi;
     int ogrenciSayisi;
     boolean zeminKattaMi;
 

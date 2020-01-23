@@ -1,7 +1,5 @@
 package exceptionhandling;
 
-import dizilervelisteler.Ogrenci;
-import egitim.Ogretmen;
 import egitim.Okul;
 
 /**

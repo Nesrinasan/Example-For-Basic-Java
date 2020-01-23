@@ -1,9 +1,11 @@
 package Java8LamdaExp;
 
+import model.Staff;
+
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -21,10 +23,10 @@ public class StreamApiKullanimi {
         /**
          * Filtreleme
          */
-        List<String> isimYeniList = adList.stream().filter(s -> s.equals("Nesrin")).collect(Collectors.toList());
-        isimYeniList.stream().forEach(System.out::println);
-        //veya
-        adList.stream().filter(s -> s.equals("Burak")).forEach(System.out::println);
+//        List<String> isimYeniList = adList.stream().filter(s -> s.equals("Nesrin")).collect(Collectors.toList());
+//        isimYeniList.stream().forEach(System.out::println);
+//        //veya
+//        adList.stream().filter(s -> s.equals("Burak")).forEach(System.out::println);
 
 
         /**
@@ -32,9 +34,9 @@ public class StreamApiKullanimi {
          * Bu nedenle aşağıdaki gibi bir kod yazdığınız zaman aynı "stream" üzerinde iki adet işlem yapılmış olacaktır.
          * Bunun için birkaç çözüm var.
          */
-        Stream<String> stream = adList.stream();
-        Optional<String> first = stream.findFirst();
-        Optional<String> any = stream.findAny();
+//        Stream<String> stream = adList.stream();
+//        Optional<String> first = stream.findFirst();
+//        Optional<String> any = stream.findAny();
 
         /**
          * ilk olarak aynı stream üzerinden devam edersiniz işlerinize.
@@ -58,19 +60,19 @@ public class StreamApiKullanimi {
          * Stream veri ekleme, dizi olarak vs.
          */
         //1
-        Stream<Integer> streams = Stream.of(1,2,3,4,5,6,7,8,9);
-        streams.forEach(System.out::println);
-        //2
-        Stream.of( new Integer[]{1,2,3,4,5,6,7,8,9} );
-        //3
-        List<Integer> list = new ArrayList<Integer>();
-        for(int i = 1; i< 10; i++){
-            list.add(i);
-        }
-        //4
-        Integer[] evenNumbersArr = list.stream().filter(i -> i%2 == 0).toArray(Integer[]::new);
-        Stream<Integer> evenNumbersArr1 = Stream.of(evenNumbersArr);
-        evenNumbersArr1.forEach(System.out::println);
+//        Stream<Integer> streams = Stream.of(1,2,3,4,5,6,7,8,9);
+//        streams.forEach(System.out::println);
+//        //2
+//        Stream.of( new Integer[]{1,2,3,4,5,6,7,8,9} );
+//        //3
+//        List<Integer> list = new ArrayList<Integer>();
+//        for(int i = 1; i< 10; i++){
+//            list.add(i);
+//        }
+//        //4
+//        Integer[] evenNumbersArr = list.stream().filter(i -> i%2 == 0).toArray(Integer[]::new);
+//        Stream<Integer> evenNumbersArr1 = Stream.of(evenNumbersArr);
+//        evenNumbersArr1.forEach(System.out::println);
 
 
         /**
@@ -94,7 +96,24 @@ public class StreamApiKullanimi {
         System.out.println(collect);
 
 
+        List<Staff> staffList = Arrays.asList(
+                new Staff("mkyong", 15, new BigDecimal(10000)),
+                new Staff("mkyong", 10, new BigDecimal(20000)),
+                new Staff("lawrence", 33, new BigDecimal(30000))
+        );
 
+        Map<String, List<Staff>> stringListMap = staffList.stream().collect(Collectors.groupingBy(o -> o.getAd()));
+        stringListMap.forEach((s, staff) -> System.out.format( "adı %s: %s\n", s, staff));
+        /**
+         * Key'i bulmak için aşağıdaki gibi kod yazabilriiz.
+         */
+        Stream<String> stringStream = stringListMap.entrySet().stream().map(Map.Entry::getKey);
+        stringStream.forEach(System.out::println);
+
+        /**
+         * key almak için aşağıdaki yöntemde kullanılabilir.
+         */
+        stringListMap.keySet().forEach(System.out::println);
 
     }
 

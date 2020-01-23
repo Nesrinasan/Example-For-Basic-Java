@@ -30,5 +30,11 @@ public class SubstringKullanimi {
          */
         day = day.replace ('D', 'Z').substring (3);
         System.out.println (day);
+
+
+        String s = new String("nesrin");
+        String s2 = new String("nesrin");
+        System.out.println(s == s2);
+        System.identityHashCode(s);
     }
 }

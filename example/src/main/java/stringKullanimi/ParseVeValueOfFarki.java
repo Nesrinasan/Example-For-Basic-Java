@@ -1,9 +1,5 @@
 package stringKullanimi;
 
-import egitim.Ogretmen;
-
-import java.lang.reflect.Field;
-
 /**
  * Created by Universal on 1/9/2020.
  */
@@ -13,7 +9,7 @@ public class ParseVeValueOfFarki {
         /**
          * Parse dönüşünde primitive tip verir.
          * ValueOf ise referance değer verir.
-         * Bu hız açısından faydalı olur. biri dtackte biri heapte saklanıyor sonuçta. Stackte saklanan veriye ulaşım daha kolaydır.
+         * Bu hız açısından faydalı olur. biri stackte biri heapte saklanıyor sonuçta. Stackte saklanan veriye ulaşım daha kolaydır.
          */
         String sayi = "10";
         Integer integer1 = Integer.valueOf(sayi);
@@ -26,8 +22,8 @@ public class ParseVeValueOfFarki {
          * Bu iki aralık olmasını sebbei en çok kullanılan aralık olmasından dolayı.
          * Bu değeri geçince farklı nesneler olarak oluşturur.
          */
-        Integer s = 127;
-        Integer s2 = 127;
+        Integer s = 128;
+        Integer s2 = 128;
         System.out.println(s == s2);//false
 
         /**

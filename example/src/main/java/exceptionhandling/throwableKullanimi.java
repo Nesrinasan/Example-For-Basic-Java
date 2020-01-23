@@ -1,10 +1,9 @@
 package exceptionhandling;
 
-import egitim.Ogretmen;
+import model.Ogretmen;
 import egitim.Okul;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 
 /**
  * Created by Universal on 12/7/2019.

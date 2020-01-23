@@ -10,6 +10,9 @@
     </facet>
     <facet type="gwt" name="GWT">
       <configuration>
+        <setting name="compilerMaxHeapSize" value="1024" />
+        <setting name="gwtScriptOutputStyle" value="DETAILED" />
+        <setting name="gwtSdkUrl" value="file://" />
         <setting name="webFacet" value="Web" />
       </configuration>
     </facet>
@@ -22,7 +25,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.vaadin:vaadin-server:8.3.0" level="project" />
